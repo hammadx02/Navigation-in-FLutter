@@ -1,11 +1,10 @@
-// ignore: unused_import
-import 'package:first_app/screen_three.dart';
-import 'package:first_app/screen_two.dart';
+
+import 'package:first_app/utils/routes_name.dart';
 import 'package:flutter/material.dart';
 // import 'package:first_app/screen_two.dart';
 
 class HomeScreen extends StatefulWidget {
-  static const String id = 'home_screen';
+ 
 
   const HomeScreen({super.key});
 
@@ -30,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         drawer: Drawer(
           child: ListView(
             children: [
-              UserAccountsDrawerHeader(
+              const UserAccountsDrawerHeader(
                 decoration: BoxDecoration(
                   color: Color(0xff764abc),
                 ),
@@ -42,24 +41,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 accountEmail: Text('hammadaali02@gmail.com'),
               ),
               ListTile(
-                leading: Icon(Icons.home_rounded),
-                title: Text('Home Screen'),
+                leading: const Icon(Icons.home_rounded),
+                title: const Text('Home Screen'),
                 onTap: () {
-                  Navigator.pushNamed(context, HomeScreen.id);
+                  Navigator.pushNamed(context, RouteName.HomeScreen);
                 },
               ),
               ListTile(
-                leading: Icon(Icons.login_rounded),
-                title: Text('Screen Two'),
+                leading: const Icon(Icons.login_rounded),
+                title: const Text('Screen Two'),
                 onTap: () {
-                  Navigator.pushNamed(context, ScreenTwo.id);
+                  Navigator.pushNamed(context, RouteName.ScreenTwo);
                 },
               ),
               ListTile(
-                leading: Icon(Icons.logout_rounded),
-                title: Text('Screen Three'),
+                leading: const Icon(Icons.logout_rounded),
+                title: const Text('Screen Three'),
                 onTap: () {
-                  Navigator.pushNamed(context, ScreenThree.id);
+                  Navigator.pushNamed(context, RouteName.ScreenThree);
                 },
               ),
             ],
@@ -71,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, ScreenTwo.id);
+                Navigator.pushNamed(context, RouteName.ScreenTwo);
                 // Navigator.push(
                 //   context,
                 //   MaterialPageRoute(
@@ -103,12 +102,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, ScreenThree.id);
+                Navigator.pushNamed(context, RouteName.ScreenThree);
                 // Navigator.push(
                 //   context,
                 //   MaterialPageRoute(

@@ -1,9 +1,9 @@
-import 'package:first_app/home_screen.dart';
-import 'package:first_app/screen_two.dart';
+
+import 'package:first_app/utils/routes_name.dart';
 import 'package:flutter/material.dart';
 
 class ScreenThree extends StatefulWidget {
-  static const String id = 'screen_three';
+
 
   const ScreenThree({super.key});
 
@@ -14,6 +14,7 @@ class ScreenThree extends StatefulWidget {
 class _ScreenThreeState extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
+    // final arguments = ModalRoute.of(context)?.settings.arguments as Map;
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -22,7 +23,7 @@ class _ScreenThreeState extends State<ScreenThree> {
           // ignore: prefer_const_constructors
           title: Center(
             // ignore: prefer_const_constructors
-            child: Text('Screen Three'),
+            child: Text('Screen three'),//arguments.toString()),
           ),
         ),
         body: Column(
@@ -31,7 +32,7 @@ class _ScreenThreeState extends State<ScreenThree> {
           children: [
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, HomeScreen.id);
+                Navigator.pushNamed(context, RouteName.HomeScreen);
               },
               child: Center(
                 child: Container(
@@ -57,12 +58,12 @@ class _ScreenThreeState extends State<ScreenThree> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, ScreenTwo.id);
+                Navigator.pushNamed(context, RouteName.ScreenTwo);
               },
               child: Center(
                 child: Container(

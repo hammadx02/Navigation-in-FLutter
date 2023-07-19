@@ -1,6 +1,5 @@
-import 'package:first_app/home_screen.dart';
-import 'package:first_app/screen_three.dart';
-import 'package:first_app/screen_two.dart';
+import 'package:first_app/utils/routes.dart';
+import 'package:first_app/utils/routes_name.dart';
 import 'package:flutter/material.dart';
 
 // ignore: prefer_const_constructors
@@ -19,12 +18,9 @@ class _MyAppState extends State<MyApp> {
     // ignore: prefer_const_constructors
     return MaterialApp(
       // ignore: prefer_const_constructors
-      initialRoute: HomeScreen.id,
-      routes: {
-        HomeScreen.id: (context) => HomeScreen(),
-        ScreenTwo.id: (context) => ScreenTwo(),
-        ScreenThree.id: (context) => ScreenThree(),
-      },
+      initialRoute: RouteName.HomeScreen,
+      onGenerateRoute: Routes.generateRoute,
+      
     );
   }
 }

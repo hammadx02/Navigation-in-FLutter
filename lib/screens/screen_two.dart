@@ -1,10 +1,9 @@
-import 'package:first_app/home_screen.dart';
-import 'package:first_app/screen_three.dart';
+import 'package:first_app/utils/routes_name.dart';
 import 'package:flutter/material.dart';
 // import 'package:first_app/home_screen.dart';
 
 class ScreenTwo extends StatefulWidget {
-  static const String id = 'screen_two';
+  
 
   const ScreenTwo({super.key});
 
@@ -32,7 +31,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
           children: [
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, HomeScreen.id);
+                Navigator.pushNamed(
+                  context,
+                  RouteName.HomeScreen,
+                );
                 // Navigator.pop(
                 //   context,
                 //   MaterialPageRoute(
@@ -64,12 +66,16 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, ScreenThree.id);
+                Navigator.pushNamed(
+                  context,
+                  RouteName.ScreenThree,
+                  // arguments: {'Name': 'Hammad', "age": 21},
+                );
                 // Navigator.push(
                 //   context,
                 //   MaterialPageRoute(
