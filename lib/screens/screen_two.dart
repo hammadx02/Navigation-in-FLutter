@@ -22,7 +22,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
           // ignore: prefer_const_constructors
           title: Center(
             // ignore: prefer_const_constructors
-            child: Text('Screen two'),
+            child: Text('Screen Two'),
           ),
         ),
         body: Column(
