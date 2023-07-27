@@ -23,7 +23,7 @@ class _ScreenThreeState extends State<ScreenThree> {
           // ignore: prefer_const_constructors
           title: Center(
             // ignore: prefer_const_constructors
-            child: Text('Screen three'),//arguments.toString()),
+            child: Text('Screen Three'),//arguments.toString()),
           ),
         ),
         body: Column(
